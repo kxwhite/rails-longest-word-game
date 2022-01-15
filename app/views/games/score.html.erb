@@ -1,0 +1,9 @@
+<h1>Result</h1>
+
+  <% if @word.include?(@letters.to_s) && @english_word  %>
+    <p> "Congratulations!,<strong> <%= @word %> </strong> is a valid English word!" </p>
+  <% else %>
+    <p> "Sorry but <strong> <%= @word %> </strong> does not seem to be a valid English word..." </p>
+  <% end %>
+
+<p> <%= link_to 'Play again', new_path %> </p>
